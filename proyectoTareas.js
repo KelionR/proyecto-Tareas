@@ -6,9 +6,11 @@ const eliminar = document.getElementById("eliminar")
 
 agregar.addEventListener("click", function () {
 
+let task = tarea.value
+
 let tareaF = tarea.value
 
-let pTarea = document.createElement("p")
+let pTarea = document.createElement("h4")
 
 let botonEliminar = document.createElement("button")
 
@@ -17,7 +19,7 @@ let botonEditar = document.createElement("button")
 
 pTarea.innerHTML=tareaF
 pTarea.id="parrafoT"
-pTarea.className="chamoy"
+pTarea.className="tareas"
 botonEliminar.innerHTML= "Eliminar Tarea" 
 botonEditar.innerHTML= "Editar tarea" 
 
@@ -36,6 +38,59 @@ botonEditar.remove()
 
 botonEditar.addEventListener("click", function () {
     pTarea.textContent = prompt("Nuevo Texto", pTarea.textContent)
+    
+    })
+
+    localStorage.setItem("tareas" ,task)
+
+    let taskOb = localStorage.getItem("task")
+    
+    console.log(taskOb)
+
+})
+
+const evento = document.getElementById("evento")
+const añadir = document.getElementById("añadir")
+const contenerdorEventos = document.getElementById("contenedorEventos")
+const borrar = document.getElementById("borrar")
+
+
+añadir.addEventListener("click", function () {
+
+let eventos = evento.value
+
+localStorage.setItem("evento", eventos)
+
+let eventoF = evento.value
+
+let pEvento = document.createElement("h4")
+
+let botonEliminar = document.createElement("button")
+
+let botonEditar = document.createElement("button")
+
+
+pEvento.innerHTML= eventoF
+pEvento.id="parrafoT"
+pEvento.className="eventos"
+botonEliminar.innerHTML= "Eliminar Evento" 
+botonEditar.innerHTML= "Editar Evento" 
+
+
+contenerdorEventos.appendChild(pEvento)
+contenerdorEventos.appendChild(botonEliminar)
+contenerdorEventos.appendChild(botonEditar)
+
+botonEliminar.addEventListener("click", function () {
+pEvento.remove()
+botonEliminar.remove()
+botonEditar.remove()
+
+
+})
+
+botonEditar.addEventListener("click", function () {
+    pEvento.textContent = prompt("Nuevo Texto", pEvento.textContent)
     
     })
 

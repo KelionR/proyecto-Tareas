@@ -17,6 +17,7 @@ let botonEliminar = document.createElement("button")
 let botonEditar = document.createElement("button")
 
 
+
 pTarea.innerHTML=tareaF
 pTarea.id="parrafoT"
 pTarea.className="tareas"
@@ -40,6 +41,8 @@ botonEditar.addEventListener("click", function () {
     pTarea.textContent = prompt("Nuevo Texto", pTarea.textContent)
     
     })
+
+    
 
     localStorage.setItem("tareas" ,task)
 

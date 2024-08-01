@@ -1,12 +1,83 @@
 .derecha{background-color: #d7fafe;}
-
-.izquerda{
-
-width: %;
-}
-
-.derecha{
-
-width: %;
-}
 .holi{background-color: #a9f6fe;}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header, main, footer {
+    padding: 20px;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Estilos de la tarjeta en el pie de página */
+.card {
+    margin-top: 20px;
+}
+
+/* Mediaquerys para dispositivos de hasta 768px (tablets en vertical) */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    header .navbar-brand {
+        font-size: 18px;
+    }
+
+    header .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+
+    main h3 {
+        font-size: 20px;
+    }
+
+    main input[type="text"], 
+    main button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .card {
+        margin-top: 10px;
+    }
+}
+
+/* Mediaquerys para dispositivos de hasta 576px (teléfonos móviles) */
+@media (max-width: 576px) {
+    header .navbar-brand {
+        font-size: 16px;
+    }
+
+    header .navbar-nav .nav-link {
+        font-size: 12px;
+    }
+
+    main h3 {
+        font-size: 18px;
+    }
+
+    main input[type="text"], 
+    main button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .card-header {
+        font-size: 18px;
+    }
+
+    .card-body h4, 
+    .card-body h6 {
+        font-size: 16px;
+    }
+}
